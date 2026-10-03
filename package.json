@@ -1,0 +1,13 @@
+{
+  "name": "morse-timing-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node src/server.ts",
+    "cli": "node src/cli.ts",
+    "demo": "node src/demo.ts",
+    "test": "node --test \"tests/**/*.test.ts\""
+  }
+}
