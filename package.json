@@ -1,0 +1,25 @@
+{
+  "name": "morse-pulse-backend",
+  "version": "1.0.0",
+  "description": "离线摩尔斯脉冲时序编解码与间隔诊断后端（TypeScript + Node.js + SQLite）",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "morse": "dist/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "build:test": "tsc -p tsconfig.test.json",
+    "test": "npm run build:test && node --disable-warning=ExperimentalWarning --test \"dist-test/tests/**/*.test.js\"",
+    "start": "node --disable-warning=ExperimentalWarning dist/api/server.js",
+    "dev": "node --disable-warning=ExperimentalWarning --experimental-strip-types src/api/server.ts",
+    "demo": "npm run build && node --disable-warning=ExperimentalWarning dist/demo.js",
+    "cli": "node --disable-warning=ExperimentalWarning dist/cli/index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "typescript": "^5.7.0"
+  }
+}
